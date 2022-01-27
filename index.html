@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Real Man</title>
+	<link rel="stylesheet" href="main.css">
+		<link rel="shortcut icon" href="ico.png" type="image/png">
+</head>
+<body>
+
+<div class="logo">
+	<img src="logo.png" alt="">
+</div>
+
+
+
+	<h1>
+		WELCOME TO  <br>
+		<span>«REAL MAN»</span>
+		BARBERSHOP
+	</h1>
+	<div class="loading">
+
+		<div class="round_l"></div>
+
+		<div class="l">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+
+		<div class="round_r"></div>
+	</div>
+	
+	<div id="black"></div>
+	
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+
+	window.onload = time();
+
+	function time() {
+	  var timeout;
+	  timeout = setTimeout(black, 2000);
+	};
+
+	function black() {
+	  document.getElementById('black').style.display = 'block';
+	  let tout; 
+	  tout = setTimeout(dark, 500);;
+	}
+
+	function dark() {
+	  document.getElementById('black').style.opacity = '1';
+	  let tout; 
+	  tout = setTimeout(redirect, 500);
+	}
+
+	function redirect() {
+    	document.location.href='lp.html';
+	};	
+		
+</script>
+
+</html>

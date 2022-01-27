@@ -1,0 +1,785 @@
+@font-face {
+	font-family: "Pobeda Bold";
+	src: url("fonts/pobeda-bold.eot"); /* IE9 Compat Modes */
+	src: url("fonts/pobeda-bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+		url("fonts/pobeda-bold.otf") format("opentype"), /* Open Type Font */
+		url("fonts/pobeda-bold.svg") format("svg"), /* Legacy iOS */
+		url("fonts/pobeda-bold.ttf") format("truetype"), /* Safari, Android, iOS */
+		url("fonts/pobeda-bold.woff") format("woff"), /* Modern Browsers */
+		url("fonts/pobeda-bold.woff2") format("woff2"); /* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+}
+
+#black {
+	position: absolute;
+	z-index: 10000;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100vh;
+	background: #000;
+	opacity: 1;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+video {
+	object-fit: cover; 
+	height: 100vh; 
+	width: 100%; 
+	margin: 0; 
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.opacity {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background: rgba(0,0,0, .7);
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.opacity h1 {
+	color: #fce811;
+	font-family: "Pobeda Bold";
+	font-size: 100px;
+	letter-spacing: 5px;
+	position: relative;
+}
+
+
+.opacity h1::before {
+	content: '';
+	width: 50%;
+	height: 3px;
+	background: #fce811;
+	position: absolute;
+	top: 50%;
+	left: -60%;
+	transform: translateY(-50%);
+}
+
+.opacity h1::after {
+	content: '';
+	width: 50%;
+	height: 3px;
+	background: #fce811;
+	position: absolute;
+	top: 50%;
+	right: -54%;
+	transform: translateY(-50%);
+}
+
+
+.opacity h1 span {
+	color: transparent;
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fce811;
+}
+
+.opacity h2 {
+	color: #fff;
+	font-family: "Pobeda Bold";
+	font-size: 60px;
+	letter-spacing: 7px;
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 65px;
+	z-index: 100000;
+	background: rgba(0,0,0, 0.);
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 50px;
+	padding-right: 50px;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.nav-scroll {
+	background: rgba(0,0,0, 1);
+	transition: all 0.5s;
+}
+
+nav .logo {
+	height: 100%;
+	width: 30%;
+	padding-top: 5px;
+}
+
+nav .logo img {
+	height: 100%;
+	cursor: pointer;
+}
+
+nav .menu {
+	width: 70%;
+}
+
+nav .menu ul {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: space-around;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+}
+
+nav .menu ul li a {
+	text-decoration: none;
+	color: white;
+	font-family: "Pobeda Bold";
+	font-size: 20px;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	transition: all 0.2s;
+}
+
+nav .menu ul li a::after {
+	content: '';
+	width: 0%;
+	height: 1.7px;
+	position: absolute;
+	left: 50%;
+	bottom: -2px;
+	background: #fce811;
+}
+
+nav .menu ul li a::before {
+	content: '';
+	width: 0%;
+	height: 1.7px;
+	position: absolute;
+	right: 50%;
+	bottom: -2px;
+	background: #fce811;
+}
+
+nav .menu ul li a:hover {
+	color: #fce811;
+}
+
+nav .menu ul li a:hover::after {
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	width: 50%;
+}
+
+nav .menu ul li a:hover::before {
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	width: 50%;
+}
+
+section {
+	height: 100vh;
+	width: 100%;
+	padding-top: 80px;
+}
+
+.barbers {
+	height: 100vh;
+	width: 100%;
+	margin-top: 100vh;
+}
+
+.barbers h1 {
+	color: #000;
+	font-family: "Pobeda Bold";
+	font-size: 40px;
+	letter-spacing: 2px;
+	text-align: center;
+}
+
+.barbers .b_row {
+	width: 100%;
+	height: 71vh;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+	margin-top: 15px;
+}
+
+.barbers .b_row img {
+	height: 100%;
+	z-index: 100;
+}
+
+.barbers .b_row .card {
+	height: 100%;
+	box-shadow: 9px 9px 17px -9px rgba(0,0,0,0.75);
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+}
+
+.barbers .b_row .info {
+	color: #fff;
+	font-family: "Pobeda Bold";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	text-align: left;
+	padding: 30px 20px 0;
+	opacity: 0;
+	z-index: -10;
+	transition: all 1s;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;	
+}
+
+.barbers .b_row .card::before {
+	content: '';
+	position: absolute;
+	bottom: -60%;
+	right: -60%;
+	background: #000;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	transition: all 1.25s;
+	transition-delay: 0.15s;
+}
+
+.barbers .b_row .card:hover::before {
+	width: 300%;
+	height: 300%;
+	z-index: 11;
+}
+
+.barbers .b_row .card:hover > .info {
+	z-index: 13;
+	opacity: 1;
+	transition-delay: 0.15s;
+}
+
+.barbers .b_row .card:first-child {
+	margin-right: 100px;
+}
+
+.barbers .b_row .info h2 {
+	letter-spacing: 3px;
+	margin-left: -80px;
+	margin-bottom: 7px;
+	text-align: center;
+	font-size: 40px;
+	transition: all 0.8s;
+	opacity: 0;
+	color: #fce811;
+}
+
+.barbers .b_row .card:hover > .info h2 {
+	transition-delay: 1.05s;
+	opacity: 1;
+	margin-left: 0;
+}
+
+.barbers .b_row .info p {
+	font-size: 21px;
+	margin-top: -30px;
+	transition: all 0.8s;
+	opacity: 0;
+}
+
+.barbers .b_row .card:hover > .info p {
+	transition-delay: 1.65s;
+	opacity: 1;
+	margin-top: 0;
+}
+
+.services {
+	background: url(servicesbg.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	position: relative;
+	z-index: 10;
+}
+
+.services h1 {
+	color: #fff;
+	font-family: "Pobeda Bold";
+	font-size: 40px;
+	letter-spacing: 2px;
+	text-align: center;
+	z-index: 100;
+	margin-bottom: 5px;
+}
+
+.services h2 {
+	color: #fff;
+	font-family: "Pobeda Bold";
+	font-size: 33px;
+	letter-spacing: 2px;
+	text-align: center;
+	z-index: 100;
+}
+
+.services h1 span {
+	color: #fce811;
+	font-size: 45px;
+}
+
+
+.services h1::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -15;
+	background: rgba(0,0,0, .65);
+}
+
+.services .boxes {
+	margin-top: 55px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.services .boxes .box {
+	color: #fff;
+	font-family: "Pobeda Bold";
+	margin: 40px;
+	position: relative;
+	width: 300px;
+	height: 400px;
+	background: rgba(0,0,0,0.7);;
+	box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.services .boxes .box  .face {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-family: "Pobeda Bold";
+
+}
+
+.services .boxes .box  .face.face1 {
+	padding: 20px;	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+}
+
+.services .boxes .box  .face.face1 .content {
+	padding-top: 60px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	width: 95%;
+	height: 100%;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.services .boxes .box  .face.face1 .content .row{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	width: 100%;
+	z-index: 20;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: space-around;
+	position: relative;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.services .boxes .box  .face.face1 .content .row p {
+	font-size: 20px;
+
+}
+
+.services .boxes .box  .face.face1 .content .row:hover {
+	transform: scale(1.15);
+}
+
+.services .boxes .box:hover .face.face2{
+	height: 60px;
+
+}
+
+.services .boxes .box  .face.face2 {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	background: #111;
+	position: relative;
+	bottom: 0;
+	left: 0;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	z-index: 100;
+}
+
+.services .boxes .box  .face.face2:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 50%;
+/*	background: rgba(110, 67, 24, 0.2);;
+*/}
+
+.services .boxes .box  .face.face2 h3 {
+	margin: 0;
+	padding: 0;
+	font-size: 80px;
+	color: #fce811;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	z-index: 100;
+}
+
+.services .boxes .box:hover .face.face2 h3 {
+	font-size: 2em;
+}
+
+.request {
+	background: url(barberbg.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	position: relative;
+	z-index: 10;
+	background-position: 50% 50%;
+	padding-top: 110px;
+}
+
+form {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-top: 80px;
+}
+
+.request h1 {
+	color: #fff;
+	font-family: "Pobeda Bold";
+	font-size: 40px;
+	letter-spacing: 2px;
+	text-align: center;
+	z-index: 100;
+	margin-bottom: 5px;
+ }
+
+ .request h1 span {
+ 	color: #fce811
+ }
+
+ .request h1:before {
+ 	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -15;
+	background: rgba(0,0,0, .65);
+ }
+
+
+ .request .content {
+ 	margin: 0;
+ 	display: -webkit-flex;
+ 	display: -moz-flex;
+ 	display: -ms-flex;
+ 	display: -o-flex;
+ 	display: flex;
+ 	align-items: flex-start;
+ 	justify-content: space-around;
+ 	font-family: "Pobeda Bold";
+
+ }
+
+ .request .content form {
+ 	width: 40%;
+ 	font-family: "Pobeda Bold";
+ }
+
+ .request .row {
+ 	width: 100%;
+ 	display: -webkit-flex;
+ 	display: -moz-flex;
+ 	display: -ms-flex;
+ 	display: -o-flex;
+ 	display: flex;
+ 	-webkit-flex-direction: column;
+ 	-moz-flex-direction: column;
+ 	-ms-flex-direction: column;
+ 	-o-flex-direction: column;
+ 	flex-direction: column;
+ 	justify-content: left;
+	-ms-align-items: center;
+	align-items: center;
+
+}
+
+
+
+
+ .request .row:nth-child(1) input:nth-child(1),
+ .request .row:nth-child(2) input:nth-child(1) {
+	margin-right: 0px;
+ }
+
+ .request .row:nth-child(3) input:nth-child(1) {
+ 	width: 200px;
+ }
+
+ .request .row:last-child {
+  	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+  	margin-bottom: 0;
+  }
+
+
+ .request .row input::-webkit-input-placeholder {
+ 	color: #fce811;
+ 	font-family: "Pobeda Bold";
+ }
+.request .row input {
+   	width: 80%;
+   	padding: 15px;
+   	margin-bottom: 30px;
+   	padding-left: 8px;
+   	border-radius: 4px;
+   	border-bottom-right-radius: 0px;
+   	border-bottom-left-radius: 0px;
+   	outline: none;
+   	height: 50px;
+   	color: #fce811;
+   	line-height: 50px;
+	font-size: 20px;
+	font-family: "Pobeda Bold";
+	font-weight: 600;
+	background: rgba(0,0,0, 0.7);
+/*	border: 2px solid #fce811;*/
+	border-radius: 0;
+   }
+
+
+ .request .row .btn {
+ 	position: relative;
+ 	border: 2px solid black;
+ 	height: 50px;
+ 	line-height: 46px;
+ 	font-size: 25px;
+ 	margin: 0;
+ 	padding: 0;
+ 	background: #fce811;
+ 	cursor: pointer;
+ 	color: #000;
+ 	border-radius: 0;
+ 	-webkit-box-sizing: border-box;
+ 	-moz-box-sizing: border-box;
+ 	box-sizing: border-box;
+
+ }  
+
+.about {
+	background: url('aboutbg.jpg');
+	-webkit-background-size: cover;
+	background-size: cover;
+	position: relative;
+	z-index: 100;
+}
+
+.about .about_logo {
+	text-align: center;
+	position: relative;
+	width: 70px;
+	height: 80px;
+	margin: 0 auto 15px auto;  
+}
+
+.about .about_logo img {
+	height: 100%;
+}
+
+.about .about_logo::before {
+	content: '';
+	position: absolute;
+	left: -110px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100px;
+	height: 3px;
+	z-index: 100000;
+	background: #fff;
+}
+
+.about .about_logo::after {
+	content: '';
+	position: absolute;
+	right: -107px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100px;
+	height: 3px;
+	z-index: 100000;
+	background: #fff;
+}
+
+.about h1 {
+	color: #fff;
+	font-family: "Pobeda Bold";
+	font-size: 40px;
+	letter-spacing: 2px;
+	text-align: center;
+	z-index: 100;
+	margin-bottom: 5px;
+ }
+
+ .about:before {
+ 	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: -1;
+	background: rgba(0,0,0, .65);
+ }
+
+ .about .cont {
+ 	width: 100%;
+ 	height: 75%;
+ 	display: -webkit-flex;
+ 	display: -moz-flex;
+ 	display: -ms-flex;
+ 	display: -o-flex;
+ 	display: flex;
+ 	-ms-align-items: center;
+ 	align-items: center;
+ 	justify-content: center;
+ }
+
+ .about .cont img {
+ 	height: 90%;
+ 	margin-right: 10px;
+ }
+
+ .about .cont .onas {
+ 	width: 35%;
+ }
+
+ .onas h2 {
+ 	font-size: 30px;
+ 	color: #fce811;
+	font-family: "Pobeda Bold"; 	
+ }
+
+ .onas p {
+ 	color: #fff;
+	font-family: "Pobeda Bold";
+	text-align: left;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;	
+	font-size: 19.5px;
+
+ }

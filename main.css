@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+@font-face {
+	font-family: "Pobeda Bold";
+	src: url("fonts/pobeda-bold.eot"); /* IE9 Compat Modes */
+	src: url("fonts/pobeda-bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+		url("fonts/pobeda-bold.otf") format("opentype"), /* Open Type Font */
+		url("fonts/pobeda-bold.svg") format("svg"), /* Legacy iOS */
+		url("fonts/pobeda-bold.ttf") format("truetype"), /* Safari, Android, iOS */
+		url("fonts/pobeda-bold.woff") format("woff"), /* Modern Browsers */
+		url("fonts/pobeda-bold.woff2") format("woff2"); /* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#black {
+	position: absolute;
+	z-index: 100000;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100vh;
+	background: #000;
+	opacity: 0;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+	display: none;
+}
+
+body {
+	background: url(1.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center 40%;
+	color: white;
+	
+}
+
+
+
+.logo {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 5px;
+	left: 50px;
+	height: 60px;
+	cursor: pointer;
+	z-index: 10000;
+}
+
+.logo img {
+	height: 100%;
+}
+
+
+@keyframes anim {
+	0% {
+		width: 0;
+		opacity: 0;
+	}
+	60%, 100% {
+		width: 100%;
+		opacity: 1;
+	}
+}
+
+h1 {
+	width: 70%;
+	z-index: 10000;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 170px;
+	letter-spacing: 7px;
+	font-family: "Pobeda Bold";
+	font-size: 80px;
+	color: #fff;
+	opacity: 1;
+}
+
+h1 span {
+	color: #fce811;
+}
+
+h1::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background: rgba(0,0,0, .7);
+}
+
+	
+
+.loading{
+	margin: 70px auto 0 auto;
+	text-align: center;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+	height: 100px;
+	width: 82%;
+}
+
+.l {
+	width: 1260px;
+	height: 80px;
+	z-index: 10;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+	padding-left: 122px;
+	overflow: hidden;
+	animation: animate infinite;
+	animation-timing-function: linear;
+	animation-duration: 3s;
+	position: relative;
+}
+
+@keyframes animate {
+	0% {
+		padding-left: 0;
+	}
+	50% {
+		padding-left: 122px;
+	}
+	100% {
+		padding-left: 244px;
+	}
+}
+
+
+
+.l span {
+	z-index: 10;
+	background: #fff;
+	height: 200px;
+	min-width: 26px;
+	margin-right: 35px;
+	transform: rotate(-40deg);
+}
+
+.l span:nth-child(2n) {
+	background: #fce811;
+}
+
+.round_l {
+	position: relative;
+	height: 80px;
+	width: 40px;
+	background: #fff;
+	z-index: 100;
+	border-radius: 100px 0px 0px 100px; 
+	margin-right: 41px;
+}
+
+.round_l::after{
+	content: '';
+	height: 96px;
+	width: 25px;
+	position: absolute;
+	right: -33px;
+	top: -8px;
+	background: #FFF;
+	border-radius: 5px; 
+}
+
+.round_r {
+	position: relative;
+	height: 80px;
+	width: 40px;
+	background: #fff;
+	z-index: 100;
+	border-radius: 0 100px 100px 0; 
+	margin-left: 41px;
+}
+
+.round_r::before{
+	content: '';
+	height: 96px;
+	width: 25px;
+	position: absolute;
+	left: -33px;
+	top: -8px;
+	background: #FFF;
+	border-radius: 5px; 
+}
